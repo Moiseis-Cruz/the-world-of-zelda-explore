@@ -35,13 +35,15 @@ export const Main = () => {
         <section>
             {gameZelda.game.length > 0 ? <GamesList games={gameZelda.game} /> : "❌❌ Não há nada sobre a franquia ❌❌"}
 
-            <BtnPage onClick={handlePrevPage} disabled={pageIndex === 0}>
-                Prev Page
-            </BtnPage>
+            <DivBtns>
+                <BtnPage onClick={handlePrevPage} disabled={pageIndex === 0}>
+                    Prev Page
+                </BtnPage>
 
-            <BtnPage onClick={handleNextPage} disabled={pageIndex >= gameZelda.game.length} >
-                Next Page
-            </BtnPage>
+                <BtnPage onClick={handleNextPage} disabled={pageIndex >= gameZelda.game.length} >
+                    Next Page
+                </BtnPage>
+            </DivBtns>
 
         </section>
     )
@@ -69,8 +71,17 @@ const GamesList = ({games}) => {
     )
 }
 
+const DivBtns = styled.div `
+    margin-top: 50px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+`
+
 const BtnPage = styled.button`
-    background-color: #5dca97;
+    background-color: #6a09af;
+    color: #e4e4e4;
     &:hover{
         box-shadow: 0 0 15px 5px black;
     }
@@ -81,5 +92,6 @@ const BtnPage = styled.button`
         box-shadow: none;
         transform: scale(1);
         cursor: no-drop;
+        opacity: 0.5;
     }
 `
