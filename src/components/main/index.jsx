@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import styled from "styled-components"
 
 async function getDatosZelda(pageIndex){
     const response = await fetch(`https://zelda.fanapis.com/api/games?limit=6&page=${pageIndex}`)
@@ -21,20 +22,28 @@ export const Main = () => {
         fetchData()
     },[pageIndex])
 
+    const handlePrevPage = () => {
+        setPageIndex((state) => state - 1)
+    }
+
+    const handleNextPage = () => {
+        setPageIndex((state) => state  + 1)
+    }
+
     return(
         <section>
             {gameZelda.game.length > 0 ? <GamesList games={gameZelda.game} /> : "❌❌ Não há nada sobre a franquia ❌❌"}
-            <button onClick={() => setPageIndex((state) => state - 1)} disabled={pageIndex === 0}>Prev Page</button>
-            <button onClick={() => setPageIndex((state) => state + 1)} disabled={pageIndex >= gameZelda.game.length} >Next Page</button>
+            <BtnPage onClick={handlePrevPage} disabled={pageIndex === 0}>Prev Page</BtnPage>
+            <BtnPage onClick={handleNextPage} disabled={pageIndex >= gameZelda.game.length} >Next Page</BtnPage>
         </section>
     )
 }
 
-const GamesList = (props) => {
+const GamesList = ({games}) => {
     return(
         <ul>
             {
-                props.games.map((item, index) => {
+                games.map((item, index) => {
                     return(
                         <li key={index}>
                             <div style={{border: '5px solid red'}}>
@@ -51,3 +60,17 @@ const GamesList = (props) => {
         </ul>
     )
 }
+
+const BtnPage = styled.button`
+    &:hover{
+        box-shadow: 0 0 15px 5px black;
+    }
+    &:active{
+        transform: scale(1.1);
+    }
+    &:disabled{
+        box-shadow: none;
+        transform: scale(1);
+        cursor: no-drop;
+    }
+`
