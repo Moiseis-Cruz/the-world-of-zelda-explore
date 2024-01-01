@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+
 import styled from "styled-components"
 
 async function getDatosZelda(pageIndex){
@@ -33,8 +34,15 @@ export const Main = () => {
     return(
         <section>
             {gameZelda.game.length > 0 ? <GamesList games={gameZelda.game} /> : "❌❌ Não há nada sobre a franquia ❌❌"}
-            <BtnPage onClick={handlePrevPage} disabled={pageIndex === 0}>Prev Page</BtnPage>
-            <BtnPage onClick={handleNextPage} disabled={pageIndex >= gameZelda.game.length} >Next Page</BtnPage>
+
+            <BtnPage onClick={handlePrevPage} disabled={pageIndex === 0}>
+                Prev Page
+            </BtnPage>
+
+            <BtnPage onClick={handleNextPage} disabled={pageIndex >= gameZelda.game.length} >
+                Next Page
+            </BtnPage>
+
         </section>
     )
 }
@@ -62,6 +70,7 @@ const GamesList = ({games}) => {
 }
 
 const BtnPage = styled.button`
+    background-color: #5dca97;
     &:hover{
         box-shadow: 0 0 15px 5px black;
     }
