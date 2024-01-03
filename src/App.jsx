@@ -23,8 +23,5 @@ const GlobalStyle = createGlobalStyle`
 
   ul {
     list-style: none;
-    /* display: flex;
-    flex-direction: column;
-    gap: 15px; */
   }
 `
