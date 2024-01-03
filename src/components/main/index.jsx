@@ -56,13 +56,13 @@ const GamesList = ({games}) => {
                 games.map((item, index) => {
                     return(
                         <li key={index}>
-                            <div style={{border: '5px solid red'}}>
+                            <ContainerDiv>
                                 <h1>{item.name}</h1>
                                 <h2><b>Developer:</b> {item.developer}</h2>
                                 <h2><b>Publiser: </b>{item.publisher}</h2>
                                 <h4><b>Released Date: </b>{item.released_date}</h4>
                                 <p><b>Description: </b>{item.description}</p>
-                            </div>
+                            </ContainerDiv>
                         </li>
                     )
                 })
@@ -70,6 +70,12 @@ const GamesList = ({games}) => {
         </ul>
     )
 }
+
+const ContainerDiv = styled.div`
+    border: 5px solid white;
+    width: 500px;
+    padding: 30px;
+`
 
 const DivBtns = styled.div `
     margin-top: 50px;
