@@ -51,7 +51,7 @@ export const Main = () => {
 
 const GamesList = ({games}) => {
     return(
-        <ul>
+        <ListGames>
             {
                 games.map((item, index) => {
                     return(
@@ -67,9 +67,16 @@ const GamesList = ({games}) => {
                     )
                 })
             }
-        </ul>
+        </ListGames>
     )
 }
+
+const ListGames = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    place-content: center;
+`
 
 const ContainerDiv = styled.div`
     border: 5px solid white;
