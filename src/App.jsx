@@ -23,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
 
   ul {
     list-style: none;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 15px; */
   }
 `
