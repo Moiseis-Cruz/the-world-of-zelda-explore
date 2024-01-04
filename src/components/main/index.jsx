@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 async function getDatosZelda(pageIndex){
-    const response = await fetch(`https://zelda.fanapis.com/api/games?limit=6&page=${pageIndex}`)
+    const response = await fetch(`https://zelda.fanapis.com/api/games?limit=6&page=${pageIndex}`);
     const datos = await response.json()
     return datos.data
 }
@@ -57,9 +57,9 @@ const GamesList = ({games}) => {
                     return(
                         <li key={index}>
                             <ContainerDiv>
-                                <h1>{item.name}</h1>
-                                <h2><b>Developer:</b> {item.developer}</h2>
-                                <h2><b>Publiser: </b>{item.publisher}</h2>
+                                <h2>{item.name}</h2>
+                                <h3><b>Developer:</b> {item.developer}</h3>
+                                <h3><b>Publiser: </b>{item.publisher}</h3>
                                 <h4><b>Released Date: </b>{item.released_date}</h4>
                                 <p><b>Description: </b>{item.description}</p>
                             </ContainerDiv>
