@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react"
 
-import styled from "styled-components"
+import { getDatosZelda } from "../../services"
 
-async function getDatosZelda(pageIndex){
-    const response = await fetch(`https://zelda.fanapis.com/api/games?limit=6&page=${pageIndex}`);
-    const datos = await response.json()
-    return datos.data
-}
+import styled from "styled-components"
 
 export const Main = () => {
 
@@ -49,7 +45,7 @@ export const Main = () => {
     )
 }
 
-const GamesList = ({games}) => {
+export const GamesList = ({games}) => {
     return(
         <ListGames>
             {
