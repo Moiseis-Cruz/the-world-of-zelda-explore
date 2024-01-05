@@ -89,6 +89,7 @@ const Description = styled.p`
     overflow-y: scroll;
     margin-top: 20px;
     text-align: left;
+    padding: 0 5px;
 `
 
 const DivBtns = styled.div `
