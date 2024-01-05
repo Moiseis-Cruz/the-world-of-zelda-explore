@@ -57,7 +57,7 @@ export const GamesList = ({games}) => {
                                 <h3><b>Developer:</b> {item.developer}</h3>
                                 <h3><b>Publiser: </b>{item.publisher}</h3>
                                 <h4><b>Released Date: </b>{item.released_date}</h4>
-                                <p><b>Description: </b>{item.description}</p>
+                                <Description><b>Description: </b>{item.description}</Description>
                             </ContainerDiv>
                         </li>
                     )
@@ -76,8 +76,14 @@ const ListGames = styled.ul`
 
 const ContainerDiv = styled.div`
     border: 5px solid white;
-    width: 500px;
-    padding: 30px;
+    width: 340px;
+    padding: 25px;
+`
+
+const Description = styled.p`
+    height: 250px;
+    overflow-y: scroll;
+    margin-top: 20px;
 `
 
 const DivBtns = styled.div `
