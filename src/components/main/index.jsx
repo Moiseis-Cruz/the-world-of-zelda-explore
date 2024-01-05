@@ -54,8 +54,8 @@ export const GamesList = ({games}) => {
                         <li key={index}>
                             <ContainerDiv>
                                 <h2>{item.name}</h2>
-                                <h3><b>Developer:</b> {item.developer}</h3>
-                                <h3><b>Publiser: </b>{item.publisher}</h3>
+                                <Subtitle><b>Developer:</b> {item.developer}</Subtitle>
+                                <Subtitle><b>Publiser: </b>{item.publisher}</Subtitle>
                                 <h4><b>Released Date: </b>{item.released_date}</h4>
                                 <Description><b>Description: </b>{item.description}</Description>
                             </ContainerDiv>
@@ -80,10 +80,15 @@ const ContainerDiv = styled.div`
     padding: 25px;
 `
 
+const Subtitle = styled.h3`
+    margin-top: 10px;
+`
+
 const Description = styled.p`
     height: 250px;
     overflow-y: scroll;
     margin-top: 20px;
+    text-align: left;
 `
 
 const DivBtns = styled.div `
