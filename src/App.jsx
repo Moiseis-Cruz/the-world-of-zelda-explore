@@ -21,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  body {
+    font-family: 'Genos', sans-serif;
+  }
+
   ul {
     list-style: none;
   }
