@@ -52,13 +52,13 @@ export const GamesList = ({games}) => {
                 games.map((item, index) => {
                     return(
                         <li key={index}>
-                            <ContainerDiv>
+                            <Card>
                                 <TitleCard>{item.name}</TitleCard>
                                 <Subtitle><Emphasis>Developer:</Emphasis> {item.developer}</Subtitle>
                                 <Subtitle><Emphasis>Publiser: </Emphasis>{item.publisher}</Subtitle>
-                                <h4><Emphasis>Released Date: </Emphasis>{item.released_date}</h4>
+                                <Date><Emphasis>Released Date: </Emphasis>{item.released_date}</Date>
                                 <Description><Emphasis>Description: </Emphasis>{item.description}</Description>
-                            </ContainerDiv>
+                            </Card>
                         </li>
                     )
                 })
@@ -74,10 +74,11 @@ const ListGames = styled.ul`
     place-content: center;
 `
 
-const ContainerDiv = styled.div`
+const Card = styled.div`
     border: 5px solid white;
     width: 340px;
     padding: 25px;
+    border-radius: 30px 0 30px 0;
 `
 
 const Emphasis = styled.span`
@@ -91,6 +92,10 @@ const TitleCard = styled.h2`
 
 const Subtitle = styled.h3`
     margin-top: 10px;
+    font-weight: 500;
+`
+
+const Date = styled.h4`
     font-weight: 500;
 `
 
