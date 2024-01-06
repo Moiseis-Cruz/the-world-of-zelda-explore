@@ -72,6 +72,7 @@ const ListGames = styled.ul`
     flex-wrap: wrap;
     gap: 15px;
     place-content: center;
+    padding-top: 80px;
 `
 
 const Card = styled.div`
