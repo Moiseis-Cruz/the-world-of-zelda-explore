@@ -1,4 +1,5 @@
 import './App.css'
+import { HeaderLogo } from './components/header'
 import { Main } from './components/main'
 import { createGlobalStyle } from 'styled-components'
 
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <HeaderLogo/>
       <Main/>
     </>
   )
