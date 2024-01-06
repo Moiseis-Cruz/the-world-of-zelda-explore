@@ -53,7 +53,7 @@ export const GamesList = ({games}) => {
                     return(
                         <li key={index}>
                             <ContainerDiv>
-                                <h2>{item.name}</h2>
+                                <TitleCard>{item.name}</TitleCard>
                                 <Subtitle><b>Developer:</b> {item.developer}</Subtitle>
                                 <Subtitle><b>Publiser: </b>{item.publisher}</Subtitle>
                                 <h4><b>Released Date: </b>{item.released_date}</h4>
@@ -80,8 +80,13 @@ const ContainerDiv = styled.div`
     padding: 25px;
 `
 
+const TitleCard = styled.h2`
+    height: 72px;
+`
+
 const Subtitle = styled.h3`
     margin-top: 10px;
+    font-weight: 500;
 `
 
 const Description = styled.p`
@@ -90,6 +95,7 @@ const Description = styled.p`
     margin-top: 20px;
     text-align: left;
     padding: 0 5px;
+    font-weight: 300;
 `
 
 const DivBtns = styled.div `
@@ -116,3 +122,7 @@ const BtnPage = styled.button`
         opacity: 0.5;
     }
 `
+
+/*
+Released Date
+*/
