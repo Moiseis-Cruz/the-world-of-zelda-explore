@@ -54,10 +54,10 @@ export const GamesList = ({games}) => {
                         <li key={index}>
                             <ContainerDiv>
                                 <TitleCard>{item.name}</TitleCard>
-                                <Subtitle><b>Developer:</b> {item.developer}</Subtitle>
-                                <Subtitle><b>Publiser: </b>{item.publisher}</Subtitle>
-                                <h4><b>Released Date: </b>{item.released_date}</h4>
-                                <Description><b>Description: </b>{item.description}</Description>
+                                <Subtitle><Emphasis>Developer:</Emphasis> {item.developer}</Subtitle>
+                                <Subtitle><Emphasis>Publiser: </Emphasis>{item.publisher}</Subtitle>
+                                <h4><Emphasis>Released Date: </Emphasis>{item.released_date}</h4>
+                                <Description><Emphasis>Description: </Emphasis>{item.description}</Description>
                             </ContainerDiv>
                         </li>
                     )
@@ -78,6 +78,11 @@ const ContainerDiv = styled.div`
     border: 5px solid white;
     width: 340px;
     padding: 25px;
+`
+
+const Emphasis = styled.span`
+    font-weight: 800;
+    color: #06c7a0;
 `
 
 const TitleCard = styled.h2`
