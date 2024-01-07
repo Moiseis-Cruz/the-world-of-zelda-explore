@@ -1,10 +1,16 @@
-import React from "react"
+// import React from "react"
+import styled from 'styled-components'
 import Logo from '../../imgs/logo-zelda.png'
 
 export const HeaderLogo = () => {
     return(
         <header>
-            <img src={Logo} alt="" style={{maxWidth: "400px", width: "100%"}} />
+            <ImgLogo src={Logo} alt="Logo do jogo Zelda" />
         </header>
     )
 }
+
+const ImgLogo = styled.img`
+    max-width: 400px;
+    width: 100%;
+`
