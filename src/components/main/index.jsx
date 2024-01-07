@@ -76,7 +76,7 @@ const ListGames = styled.ul`
 `
 
 const Card = styled.div`
-    border: 5px solid white;
+    border: 5px solid #686868;
     width: 340px;
     padding: 25px;
     border-radius: 30px 0 30px 0;
@@ -119,9 +119,9 @@ const DivBtns = styled.div `
 
 const BtnPage = styled.button`
     background-color: #6a09af;
-    color: #e4e4e4;
+    color: #edecec;
     &:hover{
-        box-shadow: 0 0 15px 5px black;
+        box-shadow: 0 0 15px 5px #686868;
     }
     &:active{
         transform: scale(1.1);
