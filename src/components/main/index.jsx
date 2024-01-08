@@ -66,7 +66,3 @@ export const GamesList = ({games}) => {
         </ListGames>
     )
 }
-
-/*
-Released Date
-*/
