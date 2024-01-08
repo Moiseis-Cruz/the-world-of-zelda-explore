@@ -2,8 +2,6 @@ import { useEffect, useState } from "react"
 
 import { getDatosZelda } from "../../services"
 
-// import styled from "styled-components"
-
 import { ListGames, Card, Emphasis, TitleCard, Subtitle, Date, Description, DivBtns, BtnPage } from './styles'
 
 export const Main = () => {
