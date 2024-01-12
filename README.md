@@ -10,3 +10,6 @@ Este é um projeto com pouco conteúdo, pois, a API consumida pelo projeto é li
 
 Este projeto é o primeiro que eu uso <i><b>React.js</b></i> com <i><b>Vite</b></i>. Com o intuido de desenvolver as minhas habilidades com a tecnologia.
 
+<br><br>
+
+<img src="./src/imgs/zelda.gif" alt="" />
