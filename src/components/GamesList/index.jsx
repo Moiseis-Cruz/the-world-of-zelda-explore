@@ -10,7 +10,7 @@ export const GamesList = ({games}) => {
                             <Card>
                                 <TitleCard>{item.name}</TitleCard>
                                 <Subtitle><Emphasis>Developer:</Emphasis> {item.developer}</Subtitle>
-                                <Subtitle><Emphasis>Publiser: </Emphasis>{item.publisher}</Subtitle>
+                                <Subtitle><Emphasis>Publisher: </Emphasis>{item.publisher}</Subtitle>
                                 <Date><Emphasis>Released Date: </Emphasis>{item.released_date}</Date>
                                 <Description><Emphasis>Description: </Emphasis>{item.description}</Description>
                             </Card>
