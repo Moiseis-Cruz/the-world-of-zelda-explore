@@ -22,7 +22,12 @@ export const Main = () => {
     },[pageIndex])
 
     const handlePrevPage = () => {
-        setPageIndex((state) => state - 1)
+        if(pageIndex === 0){
+            setPageIndex(0)
+        }else{
+
+            setPageIndex((state) => state - 1)
+        }
     }
 
     const handleNextPage = () => {
