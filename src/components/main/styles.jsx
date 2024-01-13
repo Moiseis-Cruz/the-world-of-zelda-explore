@@ -10,7 +10,7 @@ export const DivBtns = styled.div `
 `
 
 export const BtnPage = styled.button`
-    background-color: #6a09af;
+    background-color: #c2bd85;
     color: #edecec;
     &:hover{
         box-shadow: 0 0 15px 5px #686868;
