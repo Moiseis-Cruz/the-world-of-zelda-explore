@@ -20,4 +20,4 @@ E, criei os eventos de `click` para os botões. Um para voltar uma página, e o 
 
 <br><br>
 
-<img src="./src/imgs/zelda.gif" alt="" />
+<img src="./src/imgs/zelda.gif" alt="The World of Zelda Explore" />
