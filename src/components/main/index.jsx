@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-import { getDatosZelda } from "../../services"
+import { getDatosZelda } from "../../services";
 
-import { DivBtns, BtnPage } from './styles'
+import { DivBtns, BtnPage } from './styles';
 
-import { GamesList } from "../GamesList"
+import { GamesList } from "../GamesList";
 
 export const Main = () => {
 
-    const [ gameZelda, setGameZelda ] = useState({game:[]})
+    const [ gameZelda, setGameZelda ] = useState({game:[]});
 
-    const [ pageIndex, setPageIndex ] = useState(0)
+    const [ pageIndex, setPageIndex ] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,7 +19,7 @@ export const Main = () => {
             setGameZelda({game: zeldaDatos})
         }
         fetchData()
-    },[pageIndex])
+    },[pageIndex]);
 
     const handlePrevPage = () => {
         if(pageIndex === 0){
@@ -28,11 +28,11 @@ export const Main = () => {
 
             setPageIndex((state) => state - 1)
         }
-    }
+    };
 
     const handleNextPage = () => {
         setPageIndex((state) => state  + 1)
-    }
+    };
 
     return(
         <section>
@@ -50,4 +50,4 @@ export const Main = () => {
 
         </section>
     )
-}
+};

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Logo from '../../imgs/logo-zelda.png'
+import styled from 'styled-components';
+import Logo from '../../imgs/logo-zelda.png';
 
 export const HeaderLogo = () => {
     return(
@@ -7,7 +7,7 @@ export const HeaderLogo = () => {
             <ImgLogo src={Logo} alt="Logo do jogo Zelda" />
         </header>
     )
-}
+};
 
 const ImgLogo = styled.img`
     max-width: 400px;
