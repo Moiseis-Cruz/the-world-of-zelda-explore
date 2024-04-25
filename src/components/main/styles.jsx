@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const DivBtns = styled.div `
     margin-top: 50px;
     display: flex;
