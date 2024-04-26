@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { getDatosZelda } from "../../services";
 
-import { DivBtns, BtnPage } from './styles';
+import { DivBtns, BtnPage } from '../../style/Styles';
 
 import { GamesList } from "../GamesList";
 
