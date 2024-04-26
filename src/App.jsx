@@ -1,4 +1,3 @@
-import './App.css';
 import { HeaderLogo } from './components/header';
 import { Main } from './components/main';
 
