@@ -1,4 +1,4 @@
-import { ListGames, Card, Emphasis, TitleCard, Subtitle, Date, Description } from './styles';
+import { ListGames, Card, Emphasis, TitleCard, Subtitle, Date, Description } from '../../style/Styles';
 
 export const GamesList = ({games}) => {
     return(
