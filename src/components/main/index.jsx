@@ -23,15 +23,15 @@ export const Main = () => {
 
     const handlePrevPage = () => {
         if(pageIndex === 0){
-            setPageIndex(0)
+            setPageIndex(0);
         }else{
 
-            setPageIndex((state) => state - 1)
+            setPageIndex((state) => state - 1);
         }
     };
 
     const handleNextPage = () => {
-        setPageIndex((state) => state  + 1)
+        setPageIndex((state) => state  + 1);
     };
 
     return(
