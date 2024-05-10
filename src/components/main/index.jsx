@@ -14,11 +14,12 @@ export const Main = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const zeldaDatos = await getDatosZelda(pageIndex)
+            const zeldaDatos = await getDatosZelda(pageIndex);
 
-            setGameZelda({game: zeldaDatos})
+            setGameZelda({game: zeldaDatos});
         }
-        fetchData()
+
+        fetchData();
     },[pageIndex]);
 
     const handlePrevPage = () => {
@@ -27,7 +28,7 @@ export const Main = () => {
         }else{
 
             setPageIndex((state) => state - 1);
-        }
+        };
     };
 
     const handleNextPage = () => {
